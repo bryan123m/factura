@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <title>Factura</title>
+
+        <script type="text/javascript">
+
+            function generarfactura() {
+
+            var fact = prompt ("Introduzca el numero de la Factura");
+
+            var Importe = parseInt(fact);
+
+            var nombre = prompt ("Introduzca el Nombre del cliente");
+
+            var Importe = parseInt(nombre);
+
+            var telefono = prompt ("Introduzca el Telefono del Cliente");
+
+            var Importe = parseInt(telefono);
+
+            var direccion = prompt ("Introduzca la Dirección del Cliente");
+
+            var Importe = parseInt(direccion);
+
+            // for (subtotal=0; nombreproducto != "*"; subtotal++){
+
+            //     nombreproducto=prompt("Ingrece el nombre del producto");
+            //     document.write("Nombre producto: "+ nombreproducto);
+            // }
+
+            document.write("<h1> Entrecote " + "</h1>");
+
+            document.write("<h2> Catalina Fernandez" + "</h2>");
+
+            document.write("<h2> Fecha: " + "23/06/2020" + "</h2>");
+
+            document.write("<h2> El numero de la factura es " + fact + "</h2>");
+
+            document.write("<h2> Cliente: " + nombre + "</h2>");
+
+            document.write("<h2> Telefono: " + telefono + "</h2>");
+
+            document.write("<h2> Dirección: " + direccion + "</h2>");
+
+            document.write("<h2> Descripción de la compra : " + descripcion + "</h2>");
+
+            document.write('<button onclick="window.print()">Imprimir factura </button>')
+        
+        }
+
+
+        </script>
+
+        <style type="text/css">
+
+        body{
+            background-color:plum;
+            padding: 1%;
+        }
+
+        </style>
+
+
+
+
+
+    </head>
+
+    <body>
+        
+        <input type="button" name="continuar" onclick="generarfactura()" value="continuar"> 
+
+    </body>
+
+
+
+</html>
