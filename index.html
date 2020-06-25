@@ -25,11 +25,14 @@
 
             var Importe = parseInt(direccion);
 
-            // for (subtotal=0; nombreproducto != "*"; subtotal++){
+            // for(nombreproducto === "*" ){
 
-            //     nombreproducto=prompt("Ingrece el nombre del producto");
-            //     document.write("Nombre producto: "+ nombreproducto);
+            //     var producto = prompt ("Introduzca el nombre del producto o * para proceder a la facatura");
+
+            //      var  = parseInt(direccion);
             // }
+            
+            
 
             document.write("<h1> Entrecote " + "</h1>");
 
@@ -45,9 +48,30 @@
 
             document.write("<h2> Dirección: " + direccion + "</h2>");
 
-            document.write("<h2> Descripción de la compra : " + descripcion + "</h2>");
+            document.write("<h2> Descripción de la compra : " + "</h2>");
 
-            document.write('<button onclick="window.print()">Imprimir factura </button>')
+            for (subtotal=0; nombreproducto != "*"; subtotal++){
+
+                var nombreproducto=prompt("Ingrece el nombre del producto");
+                document.write("Nombre producto: "+ nombreproducto);
+
+                var precio=prompt("Ingrece el precio del producto");
+                document.write(" Precio: "+ precio);
+
+                var cantidad=prompt("Ingrece la cantidad del producto");
+                document.write(" Cantidad: "+ cantidad);
+
+                var nombreproducto=prompt('Ingrece * para terminar o cualquier tecla para continuar');
+
+                total=precio*cantidad;
+                
+
+                document.write(" Total: " + total + "</br>" + "</br>");
+            }
+
+            document.write("</br>" + "Total de la compra : "  + "</br>");
+
+            document.write("</br>" + '<button onclick="window.print()">Imprimir factura </button>')
         
         }
 
@@ -69,11 +93,10 @@
     </head>
 
     <body background="fondo.jpg">
-        
+
+    </br>
         <input type="button" name="continuar" onclick="generarfactura()" value="empezar" style="display: block; margin: 0 auto;"> 
 
     </body>
-
-
 
 </html>
