@@ -50,10 +50,12 @@
 
             document.write("<h2> Descripción de la compra : " + "</h2>");
 
+            var totalabsoluto= 0;
+
             for (subtotal=0; nombreproducto != "*"; subtotal++){
 
                 var nombreproducto=prompt("Ingrece el nombre del producto");
-                document.write("Nombre producto: "+ nombreproducto);
+                document.write("Nombre del producto: "+ nombreproducto);
 
                 var precio=prompt("Ingrece el precio del producto");
                 document.write(" Precio: "+ precio);
@@ -64,12 +66,12 @@
                 var nombreproducto=prompt('Ingrece * para terminar o cualquier tecla para continuar');
 
                 total=precio*cantidad;
-                
+                totalabsoluto = totalabsoluto + total
 
                 document.write(" Total: " + total + "</br>" + "</br>");
             }
 
-            document.write("</br>" + "Total de la compra : "  + "</br>");
+            document.write("</br>" + "Total de la compra : "  + totalabsoluto + "</br>");
 
             document.write("</br>" + '<button onclick="window.print()">Imprimir factura </button>')
         
